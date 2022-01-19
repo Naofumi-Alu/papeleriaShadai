@@ -51,7 +51,7 @@ function Navigation(){
   function PrimarySection(params) {
   
     return(
-        <div className='mainSection' style={{background: params.cssBorderColor , height:params.sizeProps}}>
+        <div className='mainSection' style={{background: params.cssBorderColor }}>
           <>
             <img className="imageMainSection"src={params.image} alt="" />
               <div className='contentText'>
@@ -69,7 +69,7 @@ function Navigation(){
   function SecondSection(params) {
     return( 
     <>
-    <div className='mainSection' style={{background: params.cssBorderColor , height:params.sizeProps}}>
+    <div className='mainSection' style={{background: params.cssBorderColor , }}>
       <div className='contentText'>
         <div className="contenedorContentTitle">
           <div className="titleText"> {params.content}</div>
@@ -89,7 +89,7 @@ function Navigation(){
       
         <div className="sectionPortafolio">
           <div className="portafolio">
-            <div className="itemPortafolio col-md-4">
+            <div className="itemPortafolio col-sm-4 md-4">
               <div className='figure'>
                 <img className='itemPortafolio-img'src={params.image} alt="iconSell" />
               </div>
@@ -99,7 +99,7 @@ function Navigation(){
               </div>
             </div>
 
-            <div className="itemPortafolio col-md-4">
+            <div className="itemPortafolio col-sm-4 md-4">
               <div className='figure'>
                 <img className='itemPortafolio-img'src={params.image2}  alt="" />
               </div>
@@ -109,7 +109,7 @@ function Navigation(){
               </div>
             </div>
 
-            <div className="itemPortafolio col-md-4">
+            <div className="itemPortafolio col-sm-4 md-4">
               <div className='figure'>
                 <img className='itemPortafolio-img'src={params.image3} alt="" />
               </div>
@@ -145,9 +145,9 @@ function Navigation(){
   
             <Navigation></Navigation>
             <div className='firstSection'>
-              <PrimarySection section='1'cssBorderColor='#0052D4' sizeProps='80%' image='https://image.freepik.com/foto-gratis/platos-desechables-ecologicos-hechos-papel-sobre-fondo-naranja_169016-2163.jpg' content='Productos Desechables' contentBody='Facilidad de compra para cualquier tipo de producto desechable para comestibles y porta comidas'></PrimarySection>
+              <PrimarySection section='1'cssBorderColor='#0052D4'  image='https://image.freepik.com/foto-gratis/platos-desechables-ecologicos-hechos-papel-sobre-fondo-naranja_169016-2163.jpg' content='Productos Desechables' contentBody='Facilidad de compra para cualquier tipo de producto desechable para comestibles y porta comidas'></PrimarySection>
   
-              <SecondSection section='2'cssBorderColor='#0072ff' image='https://image.freepik.com/foto-gratis/platos-desechables-ecologicos-hechos-papel-sobre-superficie-naranja_169016-1784.jpg' sizeProps='80%' content='Compras en linea' contentBody='Compra desde cualquier parte, entregas inmediatas'></SecondSection>
+              <SecondSection section='2'cssBorderColor='#0072ff' image='https://image.freepik.com/foto-gratis/platos-desechables-ecologicos-hechos-papel-sobre-superficie-naranja_169016-1784.jpg'  content='Compras en linea' contentBody='Compra desde cualquier parte, entregas inmediatas'></SecondSection>
             
               <ThirdSection section='3' image={compra} image2={contactUs} image3={inventario}></ThirdSection>
 
