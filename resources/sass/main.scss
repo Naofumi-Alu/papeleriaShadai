@@ -1,0 +1,105 @@
+
+body{
+  
+    background: #0052D4;  /* fallback for old browsers */
+  
+  /*
+   background: rgb(2,0,36);
+   background: linear-gradient(180deg, rgba(2,0,36,1) 26%, rgba(0,212,255,1) 100%);
+   */
+  }
+  
+  #customNav{
+    z-index: 1000;
+    font-size: 15px
+  }
+  
+  .scrol{
+    height: 2000px;
+  }
+  
+  div#customNav.active{
+    width: 100%;
+    background: #0072ff;  /* fallback for old browsers */
+    padding: 5px;
+    transition: all 0.5s ease;
+    position: fixed;
+  }
+  
+  div#customNav.active a{
+    color: #ffffff;
+  }
+  
+  div#customNav.activeNone{
+    width: 100%;
+    background:#0052D4;  /* Chrome 10-25, Safari 5.1-6 */
+    transition: all 0.2s ease;
+  }
+  
+  div#customNav.acriveNone a {
+    color: #65C7F7;
+  }
+  
+  ul {
+    padding-left: 2rem;
+    list-style-type: none;
+    padding: 10px;
+  }
+  
+  ul.nav li a{
+    color:#65C7F7;
+    font-weight: bold;
+    transition: all 0.5s ease;
+    
+  }
+  
+  ul.nav li a:hover{
+    color: #ffffff;
+    padding: 5px 10px;
+    background: #65C7F7;
+    border-radius: 15px;
+  }
+  
+  
+  
+  .App {
+    text-align: center;
+    /*background-image: url("https://e7.pngegg.com/pngimages/572/547/png-clipart-colored-pencils-creative-education-stationery.png");*/
+    height: 100vh;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
