@@ -1,30 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {hot} from 'react-hot-loader'
+
 import imageIcon1 from'../../image/vendedor.png';
 import contactUs from '../../image/charla-small.png';
 import compra from '../../image/bolsa-de-la-compra-small.png';
 import inventario from '../../image/inventario-small.png';
+import '../../sass/app.scss';
 
-import '../../../public/css/customColorBagraound.css';
 
 function Navigation(){
     return(
-      <div id='customNav'>
-            <ul className='nav justify-content-end'>
-              <li className='nav-item'>
-                <a className='nav-link active' aria-current="page" href="#">Quienes Somos</a>
-              </li>
-              <li className='nav-item'>
-                <a className='nav-link' href="#">Portafolio</a>
-              </li>
-              <li className='nav-item'>
-                <a className='nav-link' href="#">Nuestra trayectoria</a>
-              </li>
-              <li className='nav-item'>
-                <a className='nav-link' href="#">Contactenos</a>
-              </li>
-            </ul>
-       </div>
+      <>
+        <div id='customNav'>
+              <ul className='nav justify-content-end'>
+                <li className='nav-item'>
+                  <a className='nav-link active' aria-current="page" href="#">Quienes Somos</a>
+                </li>
+                <li className='nav-item'>
+                  <a className='nav-link' href="#">Portafolio</a>
+                </li>
+                <li className='nav-item'>
+                  <a className='nav-link' href="#">Nuestra trayectoria</a>
+                </li>
+                <li className='nav-item'>
+                  <a className='nav-link' href="#">Contactenos</a>
+                </li>
+              </ul>
+        </div>
+      </>
     );
   }
   
@@ -158,7 +162,7 @@ function Navigation(){
     );
   }
   
-  export default Example;
+  export default hot(module)(Example);
  
 /*
 if (document.getElementById('example')) {
