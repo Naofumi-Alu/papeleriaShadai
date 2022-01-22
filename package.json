@@ -28,7 +28,8 @@
         "react-dom": "^17.0.2",
         "react-hot-loader": "^4.13.0",
         "resolve-url-loader": "^4.0.0",
-        "sass": "^1.49.0"
+        "sass": "^1.49.0",
+        "sass-loader": "^12.4.0"
     },
     "dependencies": {
         "@compositor/jsx-loader": "^1.0.0-4",

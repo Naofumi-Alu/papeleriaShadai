@@ -4,6 +4,17 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const webpack = require('webpack');
 
+
+/*
+mix.js('resources/js/app.js',  'public/js')
+    .react()
+    .sass('resources/sass/app.scss','public/css')
+ */
+mix.sass('resources/sass/app.scss','public/css')
+    .react()
+    
+
+
 mix.babelConfig({
     presets: ["@babel/env","@babel/preset-react"]
 });
@@ -15,8 +26,8 @@ mix.webpackConfig({
     mode: 'development',
 
     output:{
-        path:path.resolve(__dirname,"resources/views/"),
-        publicPath: '/views/',
+        path:path.resolve(__dirname,"public/dist/js"),
+        publicPath: '/dist/',
         filename:'bundle.js'
     }, 
     
@@ -42,14 +53,6 @@ mix.webpackConfig({
                 use:[
                     {loader: 'babel-loader',options:{presets:["@babel/preset-react","@babel/env"]}}
                 ],
-            },
-            {
-                test:/\.scss$/,
-                use:[
-                    {loader: MiniCssExtractPlugin.loader},
-                    {loader: 'css-loader'},
-                    {loader: 'sass-loader'}
-                ],
             }
         ]
     },
@@ -57,11 +60,12 @@ mix.webpackConfig({
     target:'web',
     devServer:{
         open:true,
-       // hot:false,
+        hot:'only',
+        liveReload:false,
         port:5050,
         contentBase: path.join(__dirname,"resources/views/"),
         publicPath: "http://127.0.0.1:5050/views/",
-        hotOnly:true
+       // hotOnly:true
     }
 });
 
@@ -75,11 +79,7 @@ mix.webpackConfig({
  | file for the application as well as bundling up all the JS files.
  |
  */
-/*
-mix.js('resources/js/app.js',  'public/js')
-    .react()
-    .sass('resources/sass/app.scss','public/css')
- */   
+  
 /*
 mix.browserSync({
     notify:false,
