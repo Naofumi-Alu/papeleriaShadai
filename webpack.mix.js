@@ -5,6 +5,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 
+
 /*
 mix.js('resources/js/app.js',  'public/js')
     .react()
@@ -16,19 +17,25 @@ mix.sass('resources/sass/app.scss','public/css')
 
 
 mix.babelConfig({
-    presets: ["@babel/env","@babel/preset-react"]
+    presets: ["@babel/env","@babel/preset-react"],
+    "complementos": ["react-hot-loader/babel"]
 });
 
 
 
 mix.webpackConfig({
-    entry:'./resources/js/app.js',
+    entry:{
+        app:'./resources/js/app.js',
+        hot: 'webpack/hot/dev-server.js',
+        client: 'webpack-dev-server/client/app.js?hot=true&live-reload=true'
+    },
     mode: 'development',
-
+    devtool:'inline-source-map',
     output:{
         path:path.resolve(__dirname,"public/dist/js"),
         publicPath: '/dist/',
-        filename:'bundle.js'
+        filename:'bundle.js',
+        clean:true
     }, 
     
     plugins:[
@@ -56,11 +63,17 @@ mix.webpackConfig({
             }
         ]
     },
-    resolve:{extensions: ["*", ".js", ".jsx", ".css",".scss"] },
+    resolve:{extensions: ["*", ".js", ".jsx", ".css",".scss",],
+    alias:{
+        'react-dom':'@hot-loader/react-dom'
+    }
+    },
     target:'web',
+  
     devServer:{
         open:true,
         hot:true,
+        client:false,
         port:8000,
         static:
         {directory: path.join(__dirname,"resources/public/dist/")},

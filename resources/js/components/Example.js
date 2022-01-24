@@ -1,6 +1,12 @@
+//Modulos para live reload diferentes cualqueira de los dos podria servir
+
+import {hot} from 'react-hot-loader'
+import {setConfig} from 'react-hot-loader';
+
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {hot} from 'react-hot-loader'
+
 
 import imageIcon1 from'../../image/vendedor.png';
 import contactUs from '../../image/charla-small.png';
@@ -175,3 +181,16 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('example')
 );
+
+setConfig({
+  reloadLifeCycleHooks:true
+});
+
+
+
+
+
+
+
+
+
