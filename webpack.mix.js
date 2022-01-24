@@ -60,12 +60,13 @@ mix.webpackConfig({
     target:'web',
     devServer:{
         open:true,
-        hot:'only',
-        liveReload:false,
-        port:5050,
-        contentBase: path.join(__dirname,"resources/views/"),
-        publicPath: "http://127.0.0.1:5050/views/",
-       // hotOnly:true
+        hot:true,
+        port:8000,
+        static:
+        {directory: path.join(__dirname,"resources/public/dist/")},
+       proxy: {
+           '/': 'http://127.0.0.1:8000'
+       }
     }
 });
 

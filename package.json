@@ -1,7 +1,7 @@
 {
     "private": true,
     "scripts": {
-        "start": "npx webpack-dev-server --mode development",
+        "start": "php artisan serve",
         "build": "npx webpack --mode production",
         "dev": "npm run development",
         "development": "mix",
